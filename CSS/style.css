@@ -1,0 +1,186 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --x: 0;
+    --y: 0;
+    --xp: 0;
+    --yp: 0;
+        --hue: calc(0 + (var(--xp) * 500));
+        --bg: hsl(0 0% 10%);
+        --size: 100px;
+        --glow: radial-gradient(
+                50% 50% at center,
+                hsl(var(--hue), 80%, 85%),
+                hsl(var(--hue), 80%, 70%),
+                transparent
+            )
+            calc((var(--x) * 1px) - (var(--size) * 0.5))
+            calc((var(--y) * 1px) - (var(--size) * 0.5)) / var(--size) var(--size);
+}
+
+.controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+body {
+    display: flex;
+    place-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+    min-height: 100vh;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    background: var(--bg);
+    align-self: center;
+    text-align: center;
+    margin-top: 100px;
+} 
+
+button {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1ch;
+    background: var(--bg);
+    border: 4px solid transparent;
+    box-shadow: 0 1px #fff(0 0% 100% / 0.15) inset;
+    cursor: pointer;
+    background: 
+        linear-gradient(var(--bg), var(--bg)) padding-box,
+        var(--glow),
+        linear-gradient(black, white) border-box;
+    transition: background-size 0.24s;
+  touch-action: none;
+  position: relative;
+    padding: 1rem 2rem;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+  background: var(--bg);
+  z-index: 2;
+/*   border: 4px solid transparent; */
+  border-radius: 1rem;
+}
+
+button span {
+    background: var(--glow), white;
+    background-clip: text;
+    color: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  inset: 0;
+}
+
+:root:has(button:active) {
+    --size: 300px;
+}
+
+h1 {
+    color: white;
+    
+}
+
+h1 strong {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: whitesmoke;
+}
+
+h3 {
+    color: whitesmoke;
+}
+
+p {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background: rgb(180, 104, 104);
+    padding: 15px;
+}
+
+a {
+    color: white;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    align-self: center;
+    text-align: center;
+
+}
+
+.main {
+    float: center;
+}
+
+aside {
+    background: #282b2d;
+    padding: 20px;
+    color: #fff;
+    float: center;
+}
+
+footer {
+    background: #af5d5d;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    clear: both;
+}
+
+label {
+    color: #fff;
+}
+
+ol li strong {
+    color: #fff;
+    text-align: left;
+}
+
+ol li {
+    color: whitesmoke;
+    text-align: left;
+}
+
+table {
+    color: antiquewhite;
+    border-color: azure;
+    border-style: solid;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    height: 10%;
+    border-width: 1px;
+    border-collapse: collapse;
+    padding: 100px;
+    table-layout: fixed;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    color: antiquewhite;
+    text-align: left;
+}
+
+
+
